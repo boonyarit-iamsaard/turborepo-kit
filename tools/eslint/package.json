@@ -9,6 +9,7 @@
     "./react": "./react.js"
   },
   "scripts": {
+    "clean": "git clean -xdf .cache .turbo node_modules",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
