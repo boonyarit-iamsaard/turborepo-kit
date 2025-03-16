@@ -2,6 +2,7 @@
   "name": "turborepo-kit",
   "private": true,
   "scripts": {
+    "add:ui": "pnpm dlx shadcn@latest add -c packages/ui",
     "build": "turbo run build",
     "clean": "git clean -xdf .turbo node_modules",
     "clean:workspaces": "turbo run clean",

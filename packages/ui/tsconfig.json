@@ -3,7 +3,10 @@
   "compilerOptions": {
     "jsx": "preserve",
     "lib": ["ES2022", "dom", "dom.iterable"],
-    "rootDir": "."
+    "baseUrl": ".",
+    "paths": {
+      "@repo/ui/*": ["./src/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]

@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Noto_Sans_Thai as FontSans } from "next/font/google";
 
+import { cn } from "@repo/ui/lib/utils";
+
 const fontSans = FontSans({
   subsets: ["latin", "thai"],
   variable: "--font-sans",
@@ -22,7 +24,16 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} font-sans`}>{children}</body>
+      <body
+        className={cn(
+          "min-h-svh bg-background font-sans antialiased",
+          fontSans.variable,
+        )}
+      >
+        <div className="relative flex min-h-svh flex-col bg-background">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

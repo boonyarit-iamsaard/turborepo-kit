@@ -4,8 +4,17 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./*": "./src/*.tsx"
+    "./components/*": "./src/components/*.tsx",
+    "./hooks/*": [
+      "./src/hooks/*.ts",
+      "./src/hooks/*.tsx"
+    ],
+    "./lib/*": "./src/lib/*.ts",
+    "./styles/*": "./src/styles/*"
   },
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "clean": "git clean -xdf .cache .turbo node_modules",
     "format": "prettier --check . --ignore-path ../../.gitignore",
@@ -25,11 +34,17 @@
     "typescript": "catalog:"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/postcss": "catalog:",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.482.0",
     "postcss": "catalog:",
     "react": "catalog:react-19",
     "react-dom": "catalog:react-19",
-    "tailwindcss": "catalog:"
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "catalog:",
+    "tailwindcss-animate": "^1.0.7"
   },
   "prettier": "@repo/prettier-config/with-sort-imports"
 }
