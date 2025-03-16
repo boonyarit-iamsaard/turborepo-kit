@@ -6,6 +6,9 @@ settings:
 
 catalogs:
   default:
+    '@ianvs/prettier-plugin-sort-imports':
+      specifier: ^4.4.1
+      version: 4.4.1
     '@types/node':
       specifier: ^22.13.10
       version: 22.13.10
@@ -39,6 +42,9 @@ importers:
 
   .:
     devDependencies:
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:tools/prettier
       prettier:
         specifier: 'catalog:'
         version: 3.5.3
@@ -64,9 +70,15 @@ importers:
         specifier: catalog:react-19
         version: 19.0.0(react@19.0.0)
     devDependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: 'catalog:'
+        version: 4.4.1(prettier@3.5.3)
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../tools/eslint
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../../tools/prettier
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tools/typescript
@@ -82,6 +94,9 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.22.0
+      prettier:
+        specifier: 'catalog:'
+        version: 3.5.3
       typescript:
         specifier: 'catalog:'
         version: 5.8.2
@@ -98,9 +113,15 @@ importers:
         specifier: catalog:react-19
         version: 19.0.0(react@19.0.0)
     devDependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: 'catalog:'
+        version: 4.4.1(prettier@3.5.3)
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../tools/eslint
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../../tools/prettier
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../tools/typescript
@@ -116,6 +137,9 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.22.0
+      prettier:
+        specifier: 'catalog:'
+        version: 3.5.3
       typescript:
         specifier: 'catalog:'
         version: 5.8.2
@@ -171,7 +195,34 @@ importers:
         specifier: 'catalog:'
         version: 5.8.2
       typescript-eslint:
-        specifier: ^8.26.1
+        specifier: 'catalog:'
+        version: 8.26.1(eslint@9.22.0)(typescript@5.8.2)
+
+  tools/prettier:
+    devDependencies:
+      '@ianvs/prettier-plugin-sort-imports':
+        specifier: 'catalog:'
+        version: 4.4.1(prettier@3.5.3)
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.13.10
+      eslint:
+        specifier: 'catalog:'
+        version: 9.22.0
+      prettier:
+        specifier: 'catalog:'
+        version: 3.5.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.2
+      typescript-eslint:
+        specifier: 'catalog:'
         version: 8.26.1(eslint@9.22.0)(typescript@5.8.2)
 
   tools/typescript: {}
@@ -353,6 +404,15 @@ packages:
   '@humanwhocodes/retry@0.4.2':
     resolution: {integrity: sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==}
     engines: {node: '>=18.18'}
+
+  '@ianvs/prettier-plugin-sort-imports@4.4.1':
+    resolution: {integrity: sha512-F0/Hrcfpy8WuxlQyAWJTEren/uxKhYonOGY4OyWmwRdeTvkh9mMSCxowZLjNkhwi/2ipqCgtXwwOk7tW0mWXkA==}
+    peerDependencies:
+      '@vue/compiler-sfc': 2.7.x || 3.x
+      prettier: 2 || 3
+    peerDependenciesMeta:
+      '@vue/compiler-sfc':
+        optional: true
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -1994,6 +2054,17 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.2': {}
+
+  '@ianvs/prettier-plugin-sort-imports@4.4.1(prettier@3.5.3)':
+    dependencies:
+      '@babel/generator': 7.26.10
+      '@babel/parser': 7.26.10
+      '@babel/traverse': 7.26.10
+      '@babel/types': 7.26.10
+      prettier: 3.5.3
+      semver: 7.7.1
+    transitivePeerDependencies:
+      - supports-color
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:

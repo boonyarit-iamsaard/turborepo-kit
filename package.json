@@ -4,12 +4,14 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
+    "@repo/prettier-config": "workspace:*",
     "prettier": "catalog:",
     "turbo": "^2.4.4",
     "typescript": "catalog:"
@@ -19,5 +21,6 @@
     "npm": "please use pnpm",
     "yarn": "please use pnpm"
   },
+  "prettier": "@repo/prettier-config/base",
   "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
 }

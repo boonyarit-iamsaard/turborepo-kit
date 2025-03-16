@@ -1,6 +1,8 @@
+import type { ImageProps } from "next/image";
 import Image from "next/image";
-import type {ImageProps} from "next/image";
+
 import { Button } from "@repo/ui/button";
+
 import styles from "./page.module.css";
 
 type Props = Omit<ImageProps, "src"> & {

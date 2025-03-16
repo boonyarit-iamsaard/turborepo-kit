@@ -7,20 +7,25 @@
     "./*": "./src/*.tsx"
   },
   "scripts": {
+    "format": "prettier --check . --ignore-path ../../.gitignore",
     "lint": "eslint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "catalog:",
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "@types/react": "catalog:react-19",
     "@types/react-dom": "catalog:react-19",
     "eslint": "catalog:",
+    "prettier": "catalog:",
     "typescript": "catalog:"
   },
   "dependencies": {
     "react": "catalog:react-19",
     "react-dom": "catalog:react-19"
-  }
+  },
+  "prettier": "@repo/prettier-config/with-sort-imports"
 }
