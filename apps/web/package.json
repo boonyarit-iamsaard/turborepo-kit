@@ -14,9 +14,12 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
-    "next": "^15.2.1",
+    "@tailwindcss/postcss": "catalog:",
+    "next": "catalog:next-15",
+    "postcss": "catalog:",
     "react": "catalog:react-19",
-    "react-dom": "catalog:react-19"
+    "react-dom": "catalog:react-19",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "catalog:",
