@@ -1,17 +1,18 @@
 /// <reference types="./types.d.ts" />
 
-import * as path from "node:path";
+import { join } from "node:path";
+
 import { includeIgnoreFile } from "@eslint/compat";
-import eslint from "@eslint/js";
+import js from "@eslint/js";
 import importPlugin from "eslint-plugin-import";
 import turboPlugin from "eslint-plugin-turbo";
-import tseslint from "typescript-eslint";
+import ts from "typescript-eslint";
 
-export default tseslint.config(
+export default ts.config(
   /*
    * Ignore files not tracked by VCS and any config files
    */
-  includeIgnoreFile(path.join(import.meta.dirname, "../../.gitignore")),
+  includeIgnoreFile(join(import.meta.dirname, "../../.gitignore")),
   { ignores: ["**/*.config.*"] },
   {
     files: ["**/*.js", "**/*.ts", "**/*.tsx"],
@@ -20,10 +21,10 @@ export default tseslint.config(
       turbo: turboPlugin,
     },
     extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.recommendedTypeChecked,
-      ...tseslint.configs.stylisticTypeChecked,
+      js.configs.recommended,
+      ...ts.configs.recommended,
+      ...ts.configs.recommendedTypeChecked,
+      ...ts.configs.stylisticTypeChecked,
     ],
     rules: {
       ...turboPlugin.configs.recommended.rules,
@@ -42,9 +43,7 @@ export default tseslint.config(
       ],
       "@typescript-eslint/no-unnecessary-condition": [
         "error",
-        {
-          allowConstantLoopConditions: true,
-        },
+        { allowConstantLoopConditions: true },
       ],
       "@typescript-eslint/no-non-null-assertion": "error",
       "import/consistent-type-specifier-style": ["error", "prefer-top-level"],

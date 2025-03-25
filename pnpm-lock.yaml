@@ -213,33 +213,27 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.22.0(jiti@2.4.2)
-      eslint-config-prettier:
-        specifier: ^10.1.1
-        version: 10.1.1(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-import:
         specifier: ^2.31.0
-        version: 2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))
+        version: 2.31.0(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-jsx-a11y:
         specifier: ^6.10.2
         version: 6.10.2(eslint@9.22.0(jiti@2.4.2))
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
       eslint-plugin-react:
         specifier: ^7.37.4
         version: 7.37.4(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-react-compiler:
         specifier: beta
-        version: 19.0.0-beta-bafa41b-20250307(eslint@9.22.0(jiti@2.4.2))
+        version: 19.0.0-beta-aeaed83-20250323(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-react-hooks:
         specifier: ^5.2.0
         version: 5.2.0(eslint@9.22.0(jiti@2.4.2))
+      eslint-plugin-simple-import-sort:
+        specifier: ^12.1.1
+        version: 12.1.1(eslint@9.22.0(jiti@2.4.2))
       eslint-plugin-turbo:
         specifier: ^2.4.4
         version: 2.4.4(eslint@9.22.0(jiti@2.4.2))(turbo@2.4.4)
-      globals:
-        specifier: ^16.0.0
-        version: 16.0.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.2
@@ -1092,12 +1086,6 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-prettier@10.1.1:
-    resolution: {integrity: sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==}
-    hasBin: true
-    peerDependencies:
-      eslint: '>=7.0.0'
-
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
@@ -1138,12 +1126,8 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9
 
-  eslint-plugin-only-warn@1.1.0:
-    resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
-    engines: {node: '>=6'}
-
-  eslint-plugin-react-compiler@19.0.0-beta-bafa41b-20250307:
-    resolution: {integrity: sha512-6q5FGhEh52dM2f6aqZcPWj1tlsc+3V2V1DrIxLiqJ0r3I2aivVXDf/TBZ3Bsqe6YDvdpaVDCg+bX9lv0QMn5PQ==}
+  eslint-plugin-react-compiler@19.0.0-beta-aeaed83-20250323:
+    resolution: {integrity: sha512-zkz1RlYTt3zzo7u/O1+5GCXFf75Qwo6guOJQVqjANagc+UoiV4RHyH+HGHQ39h7Nq/QsZG8atCiUS81RMre0UQ==}
     engines: {node: ^14.17.0 || ^16.0.0 || >= 18.0.0}
     peerDependencies:
       eslint: '>=7'
@@ -1159,6 +1143,11 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
+
+  eslint-plugin-simple-import-sort@12.1.1:
+    resolution: {integrity: sha512-6nuzu4xwQtE3332Uz0to+TxDQYRLTKRESSc2hefVT48Zc8JthmN23Gx9lnYhu0FtkRSL1oxny3kJ2aveVhmOVA==}
+    peerDependencies:
+      eslint: '>=5.0.0'
 
   eslint-plugin-turbo@2.4.4:
     resolution: {integrity: sha512-myEnQTjr3FkI0j1Fu0Mqnv1z8n0JW5iFTOUNzHaEevjzl+1uzMSsFwks/x8i3rGmI3EYtC1BY8K2B2pS0Vfx6w==}
@@ -1291,10 +1280,6 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
-    engines: {node: '>=18'}
-
-  globals@16.0.0:
-    resolution: {integrity: sha512-iInW14XItCXET01CQFqudPOWP2jYMl7T+QRQT+UNcR/iQncN/F0UNpgd76iFkBPgNQb4+X3LV9tLJYzwh+Gl3A==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -2988,10 +2973,6 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-prettier@10.1.1(eslint@9.22.0(jiti@2.4.2)):
-    dependencies:
-      eslint: 9.22.0(jiti@2.4.2)
-
   eslint-import-resolver-node@0.3.9:
     dependencies:
       debug: 3.2.7
@@ -3000,17 +2981,16 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint@9.22.0(jiti@2.4.2)):
+  eslint-module-utils@2.12.0(eslint-import-resolver-node@0.3.9)(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
-      '@typescript-eslint/parser': 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint: 9.22.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)):
+  eslint-plugin-import@2.31.0(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -3021,7 +3001,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.22.0(jiti@2.4.2)
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-node@0.3.9)(eslint@9.22.0(jiti@2.4.2))
+      eslint-module-utils: 2.12.0(eslint-import-resolver-node@0.3.9)(eslint@9.22.0(jiti@2.4.2))
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -3032,8 +3012,6 @@ snapshots:
       semver: 6.3.1
       string.prototype.trimend: 1.0.9
       tsconfig-paths: 3.15.0
-    optionalDependencies:
-      '@typescript-eslint/parser': 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3058,9 +3036,7 @@ snapshots:
       safe-regex-test: 1.1.0
       string.prototype.includes: 2.0.1
 
-  eslint-plugin-only-warn@1.1.0: {}
-
-  eslint-plugin-react-compiler@19.0.0-beta-bafa41b-20250307(eslint@9.22.0(jiti@2.4.2)):
+  eslint-plugin-react-compiler@19.0.0-beta-aeaed83-20250323(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       '@babel/core': 7.26.10
       '@babel/parser': 7.26.10
@@ -3097,6 +3073,10 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
+
+  eslint-plugin-simple-import-sort@12.1.1(eslint@9.22.0(jiti@2.4.2)):
+    dependencies:
+      eslint: 9.22.0(jiti@2.4.2)
 
   eslint-plugin-turbo@2.4.4(eslint@9.22.0(jiti@2.4.2))(turbo@2.4.4):
     dependencies:
@@ -3273,8 +3253,6 @@ snapshots:
   globals@11.12.0: {}
 
   globals@14.0.0: {}
-
-  globals@16.0.0: {}
 
   globalthis@1.0.4:
     dependencies:
