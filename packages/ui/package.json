@@ -9,7 +9,7 @@
       "./src/hooks/*.ts",
       "./src/hooks/*.tsx"
     ],
-    "./lib/*": "./src/lib/*.ts",
+    "./helpers/*": "./src/helpers/*.ts",
     "./styles/*": "./src/styles/*"
   },
   "sideEffects": [

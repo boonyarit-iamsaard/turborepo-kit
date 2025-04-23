@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Noto_Sans_Thai as FontSans } from "next/font/google";
 
-import { cn } from "@repo/ui/lib/utils";
+import { cn } from "../../../packages/ui/src/helpers/cn";
 
 const fontSans = FontSans({
   subsets: ["latin", "thai"],
