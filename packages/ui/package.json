@@ -31,6 +31,7 @@
     "@types/react-dom": "catalog:react-19",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "catalog:"
   },
   "dependencies": {
@@ -45,6 +46,5 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "catalog:",
     "tailwindcss-animate": "^1.0.7"
-  },
-  "prettier": "@repo/prettier-config/with-sort-imports"
+  }
 }

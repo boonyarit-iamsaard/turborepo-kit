@@ -26,11 +26,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          "min-h-svh bg-background font-sans antialiased",
+          "bg-background min-h-dvh font-sans antialiased",
           fontSans.variable,
         )}
       >
-        <div className="relative flex min-h-svh flex-col bg-background">
+        <div className="bg-background relative flex min-h-dvh flex-col">
           {children}
         </div>
       </body>

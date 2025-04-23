@@ -4,8 +4,8 @@ import { cn } from "@repo/ui/helpers/cn";
 export default function Page() {
   return (
     <main className="flex-1">
-      <section className="grid min-h-dvh place-items-center bg-muted">
-        <div className="flex flex-col items-center gap-4 min-w-xl">
+      <section className="bg-muted grid min-h-dvh place-items-center">
+        <div className="flex min-w-xl flex-col items-center gap-4">
           <h1 className="text-2xl font-bold">Turborepo Starter Kit</h1>
           <Button type="button" className={cn("rounded-sm")}>
             Get Started

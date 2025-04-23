@@ -5,7 +5,8 @@
   "private": true,
   "exports": {
     "./base": "./base.js",
-    "./with-sort-imports": "./with-sort-imports.js"
+    "./with-sort-imports": "./with-sort-imports.js",
+    "./with-tailwind": "./with-tailwind.js"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo node_modules",
@@ -20,6 +21,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"
   }
