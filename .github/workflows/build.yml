@@ -1,0 +1,43 @@
+name: Build Project
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-project:
+    name: Build Project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.6.3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
+      # Configure environment variables for production build
+      # Ensure all required secrets are set in the repository settings
+      # - name: Prepare environment variables
+      #   run: |
+      #     echo "NODE_ENV=production" >> .env
+      #     echo "SOME_ENV=${{ secrets.SOME_ENV }}" >> .env
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm build
