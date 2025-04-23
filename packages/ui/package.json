@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "clean": "git clean -xdf .cache .turbo node_modules",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format": "prettier --check . --ignore-path ../../.prettierignore",
     "lint": "eslint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
@@ -46,5 +46,13 @@
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "catalog:",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --check --ignore-path ../../.prettierignore"
+    ],
+    "*.{js,jsx,ts,tsx,cjs,mjs}": [
+      "eslint"
+    ]
   }
 }

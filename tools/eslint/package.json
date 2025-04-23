@@ -29,5 +29,10 @@
     "eslint-plugin-turbo": "^2.4.4",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"
+  },
+  "lint-staged": {
+    "*.{js,ts,cjs,mjs}": [
+      "eslint"
+    ]
   }
 }

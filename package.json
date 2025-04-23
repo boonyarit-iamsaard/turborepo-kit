@@ -12,10 +12,13 @@
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
-    "typecheck": "turbo run typecheck"
+    "typecheck": "turbo run typecheck",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@repo/prettier-config": "workspace:*",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "prettier": "catalog:",
     "turbo": "^2.4.4",
     "typescript": "catalog:"
@@ -24,6 +27,11 @@
     "node": ">=22.14.0",
     "npm": "please use pnpm",
     "yarn": "please use pnpm"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --check --ignore-path ./.prettierignore"
+    ]
   },
   "prettier": "@repo/prettier-config/base",
   "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"

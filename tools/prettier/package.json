@@ -10,7 +10,7 @@
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo node_modules",
-    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "format": "prettier --check . --ignore-path ../../.prettierignore",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
@@ -24,5 +24,13 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --check --ignore-path ../../.prettierignore"
+    ],
+    "*.{js,ts,cjs,mjs}": [
+      "eslint"
+    ]
   }
 }
